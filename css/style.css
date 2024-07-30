@@ -37,16 +37,16 @@ p {
   left: 0;
   right: 0;
   z-index: 99;
-  background-color: #fdfdfe;
+  background-color: #00011d;
   color: #fff;
-  box-shadow: rgba(17, 12, 46, 0.15) 0px 48px 100px 0px;
+  box-shadow: 0px 2px 12px 0px rgba(0, 0, 0, 0.5);
 }
 
 .fixed-header .navbar {
-  width: 95%;
-  max-width: 1400px;
+  width: 90%;
+  max-width: 1200px;
   margin: auto;
-  padding: 0.2rem 0;
+  padding: 0.8rem 0;
 
   display: flex;
   justify-content: space-between;
@@ -55,28 +55,39 @@ p {
 
 .fixed-header .navbar-links {
   display: flex;
-  justify-content: flex-end;
+  justify-content: space-between;
   gap: 0.5rem;
 
-  /* display: none; */
+  display: none;
 }
 
 .fixed-header .logo {
-  width: 120px;
+  width: 80px;
+
+  opacity: 0.75;
+  transform: opacity 0.3s ease-in-out;
+}
+
+.fixed-header .logo img {
+  border-radius: 50%;
+}
+
+.fixed-header .logo:hover {
+  opacity: 1;
 }
 
 .fixed-header .navbar-links a {
   font-family: "Open Sans", sans-serif;
-  font-weight: 400;
   display: block;
   padding: 12px 18px;
   text-transform: uppercase;
   letter-spacing: 3px;
-  color: #01203c;
+  font-weight: 400;
+  color: #fff;
 }
 
 .fixed-header .navbar-links a:hover {
-  background-color: #d12c02;
+  background-color: #ff585d;
   color: #fff;
 }
 
@@ -84,3 +95,36 @@ p {
   background-color: #d12c02;
   color: white;
 }
+
+/* Humberger Menu */
+.fixed-header .bar {
+  display: block;
+  width: 25px;
+  height: 3px;
+  margin: 5px auto;
+  background-color: #fff;
+
+  transition: all 0.3s ease-in-out;
+}
+
+.fixed-header .hamburger {
+  display: block;
+  cursor: pointer;
+}
+
+/* Humburger menu On click */
+.fixed-header .hamburger.active .bar:nth-child(2) {
+  opacity: 0;
+}
+
+.fixed-header .hamburger.active .bar:nth-child(1) {
+  transform: translateY(8px) rotate(45deg);
+}
+
+.fixed-header .hamburger.active .bar:nth-child(3) {
+  transform: translateY(-8px) rotate(-45deg);
+}
+
+/* .hamburger {
+  display: none;
+} */
