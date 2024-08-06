@@ -63,7 +63,6 @@ p {
 
 .fixed-header .logo {
   width: 80px;
-
   opacity: 0.75;
   transform: opacity 0.3s ease-in-out;
 }
@@ -88,15 +87,10 @@ p {
 
 .fixed-header .navbar-links a:hover {
   background-color: #ff585d;
-  color: #fff;
-}
-
-.fixed-header .navbar-links .active {
-  background-color: #d12c02;
   color: white;
 }
 
-/* Humberger Menu */
+/* Hamburger Menu */
 .fixed-header .bar {
   display: block;
   width: 25px;
@@ -112,7 +106,7 @@ p {
   cursor: pointer;
 }
 
-/* Humburger menu On click */
+/* Hamburger menu On click */
 .fixed-header .hamburger.active .bar:nth-child(2) {
   opacity: 0;
 }
@@ -125,6 +119,58 @@ p {
   transform: translateY(-8px) rotate(-45deg);
 }
 
-/* .hamburger {
-  display: none;
-} */
+/* Site Navbar */
+.fixed-header .navbar-links {
+  position: fixed;
+  left: -100%;
+  top: 6.5rem;
+  flex-direction: column;
+  background-color: #00011d;
+  width: 100%;
+  text-align: center;
+  transition: all 0.3s;
+}
+
+.fixed-header .navbar-links.active {
+  left: 0;
+  display: flex;
+}
+
+/* Media queries */
+
+@media only screen and (min-width: 992px) {
+  .fixed-header .hamburger {
+    display: none;
+  }
+
+  .fixed-header .navbar {
+    width: 95%;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+  }
+
+  .fixed-header .navbar-links {
+    position: static;
+    display: flex;
+    flex-direction: row;
+    border: 0;
+  }
+}
+
+@media only screen and (min-width: 1200px) {
+  .fixed-header .logo {
+    width: 100px;
+  }
+
+  .fixed-header .navbar {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    gap: 0;
+  }
+
+  .fixed-header .navbar-links {
+    justify-content: flex-end;
+  }
+}
