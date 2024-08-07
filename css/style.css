@@ -1,3 +1,6 @@
+/* Inter */
+@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
 /* Lato */
 @import url("https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap");
 
@@ -46,7 +49,8 @@ p {
   width: 90%;
   max-width: 1200px;
   margin: auto;
-  padding: 0.8rem 0;
+  /* padding: 0.8rem 0; */
+  padding: 1.8rem 0;
 
   display: flex;
   justify-content: space-between;
@@ -62,13 +66,8 @@ p {
 }
 
 .fixed-header .logo {
-  width: 80px;
   opacity: 0.75;
   transform: opacity 0.3s ease-in-out;
-}
-
-.fixed-header .logo img {
-  border-radius: 50%;
 }
 
 .fixed-header .logo:hover {
@@ -86,10 +85,9 @@ p {
 }
 
 .fixed-header .navbar-links a:hover {
-  background-color: #ff585d;
+  background-color: #ff4960;
   color: white;
 }
-
 
 /* Hamburger Menu */
 .fixed-header .bar {
@@ -120,11 +118,11 @@ p {
   transform: translateY(-8px) rotate(-45deg);
 }
 
-/* Site Navbar */
+/* Mobile Navbar Links */
 .fixed-header .navbar-links {
   position: fixed;
   left: -100%;
-  top: 6.5rem;
+  top: 5.5rem;
   flex-direction: column;
   background-color: #00011d;
   width: 100%;
@@ -137,11 +135,64 @@ p {
   display: flex;
 }
 
-/* Media queries */
+/* Hero Section */
+.hero {
+  position: relative;
+  top: 80px;
+  color: white;
 
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.hero .background-video {
+  width: 100%;
+  height: 100vh;
+  object-fit: cover;
+  z-index: -1;
+}
+
+.hero .overlay-slogan {
+  text-align: center;
+  position: absolute;
+}
+
+.hero .overlay-slogan h1 {
+  font-weight: 900;
+  text-shadow: 2px 2px 6px #000;
+}
+
+.hero .cta {
+  font-family: "Inter", sans-serif;
+  font-size: 14px;
+  font-weight: 600;
+  display: inline-block;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  color: #ffffff;
+  background-color: #ff4960;
+  border: 2px solid #ff4960;
+  border-radius: 0.25rem;
+  padding: 12px 32px;
+  margin-top: 1.5rem;
+  transition: color 0.3s ease-in-out, background-color 0.3s ease-in-out;
+}
+
+.hero .cta:hover {
+  background-color: transparent;
+  color: #ff4960;
+  cursor: pointer;
+}
+
+/* Media queries */
 @media only screen and (min-width: 992px) {
   .fixed-header .hamburger {
     display: none;
+  }
+
+  .hero {
+    top: 150px;
   }
 
   .fixed-header .navbar {
@@ -159,9 +210,14 @@ p {
   }
 }
 
-@media only screen and (min-width: 1200px) {
+@media only screen and (min-width: 1080px) {
   .fixed-header .logo {
-    width: 100px;
+    width: 250px;
+    height: 30px;
+  }
+
+  .hero {
+    top: 100px;
   }
 
   .fixed-header .navbar {
