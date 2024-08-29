@@ -1,0 +1,672 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>South Village Run Club</title>
+    <link rel="icon" type="image/x-icon" href="favicon.png" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+    />
+    <link rel="stylesheet" href="css/reset.css" />
+    <link rel="stylesheet" href="css/style.css" />
+    <script src="js/app.js" defer></script>
+  </head>
+  <body>
+    <!-- The Header -->
+    <header class="fixed-header">
+      <nav class="navbar">
+        <a class="logo" href="#"
+          ><i class="fa-solid fa-person-running"></i
+          ><strong
+            >South Village <span class="r">R</span><span class="c">C</span>
+          </strong></a
+        >
+
+        <ul class="navbar-links">
+          <li><a href="#A">About Us</a></li>
+          <li><a href="#E">Events</a></li>
+          <li><a href="#R">Results</a></li>
+          <li><a href="#P">Partnering</a></li>
+          <li><a href="#G">Gallery</a></li>
+        </ul>
+
+        <div class="hamburger">
+          <span class="bar"></span>
+          <span class="bar"></span>
+          <span class="bar"></span>
+        </div>
+      </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero-section">
+      <!-- The video -->
+      <video class="background-video" autoplay loop muted>
+        <source src="media/video/runner.mp4" type="video/mp4" />
+      </video>
+
+      <div class="overlay-slogan">
+        <h1>Build your tomorrow</h1>
+        <p class="banner-description">
+          At our village we do everything we can to help you become your best
+          self, for the rest of your life.
+        </p>
+        <a href="#C" class="join-us-btn">Join Us</a>
+      </div>
+    </section>
+
+    <!-- Main Content -->
+    <div class="main-content">
+      <!-- Section About -->
+      <section class="about" id="A">
+        <div class="container">
+          <!-- Welcome -->
+          <div class="welcome">
+            <div class="subtitle">Welcome to South Village Running Club</div>
+            <h2 class="title">About Us</h2>
+            <p>
+              <span class="club-name">South Village Run Club</span>
+              was founded in 2013 by a small team of passionate people from the
+              running community, who were dedicated to supporting aspirant
+              athletes to achieve their individual running goals within a fresh
+              club environment. The club has grown tremendously over the years,
+              and so has the movement to inspire and assist athletes to chase
+              their goals in a vibrant and modern way.
+            </p>
+            <p class="italic">
+              We are open to all ages (from school year 4 and above) and all
+              abilities.
+            </p>
+          </div>
+
+          <!-- blurb -->
+          <ul class="blurb">
+            <li>
+              <div class="icon">
+                <i class="fa-solid fa-arrow-up-short-wide"></i>
+              </div>
+              <div class="slogan">Aspiration</div>
+            </li>
+            <li>
+              <div class="icon">
+                <i class="fa-solid fa-lightbulb"></i>
+              </div>
+              <div class="slogan">Inspiration</div>
+            </li>
+
+            <li>
+              <div class="icon">
+                <i class="fa-regular fa-circle-check"></i>
+              </div>
+              <div class="slogan">Excellence</div>
+            </li>
+          </ul>
+
+          <!-- Cards -->
+          <div class="cards">
+            <div class="card">
+              <img src="media/image/about-image1.webp" alt="" />
+              <h4>When do we train?</h4>
+              <p>
+                We train every Monday and Wednesday evening from 6.30PM and meet
+                in our club house. Mondays are generally a steady run and
+                Wednesdays are sprint or effort sessions.
+              </p>
+              <p>
+                We have different pace and distances for different abilities.
+              </p>
+              <p>
+                Ther's a good mix from experienced and fast runners to beginners
+                and people just wanting to get fit.
+              </p>
+
+              <a href="#" class="btn-link">full agenda</a>
+            </div>
+
+            <div class="card">
+              <img src="media/image/about-image2.webp" alt="" />
+
+              <h4>Where are we?</h4>
+              <p>
+                We are based at Mossley Hill Athletics Club, 9 Mossley Hill
+                Road, L18 4PT, just opposite from Sudley House.
+              </p>
+              <p>
+                We are a section of the Mossley Hill Athletics Club which also
+                includes Football, Tennis, Bowls, Rugby, Archery and more.
+              </p>
+              <p>
+                We have a large modern clubhouse with bar, function room and
+                changing facilities, ideal if you want a post training pint or
+                coffee!
+              </p>
+
+              <a href="#" class="btn-link">Google maps</a>
+            </div>
+
+            <div class="card">
+              <img src="media/image/about-image3.webp" alt="" />
+
+              <h4>What do we do?</h4>
+              <p>
+                We are predominantly road runners enjoying everything from
+                Parkruns to Marathons and everything in between.
+              </p>
+              <p>
+                During the winter season our club takes part in the Algiers
+                Country league and we are affiliated with Algeria Athletics.
+              </p>
+              <p>
+                Most of us enter races throughout the year but there is no
+                pressure if you just want to train with us.
+              </p>
+
+              <a href="#" class="btn-link">Learn more</a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Events Section -->
+      <section class="events-section" id="E">
+        <div class="container">
+          <div class="subtitle">Events</div>
+          <h2 class="title">Upcoming Events</h2>
+
+          <p class="intro-content">
+            Whether you plan on running your first 5km race, or have your sights
+            set on a Comrades gold medal,
+            <span class="club-name">South Village Run Club</span> offers you the
+            ultimate experience, with a fresh and energised approach.
+          </p>
+
+          <ul class="run">
+            <li class="event-icon">
+              <img
+                src="media/image/Algiers-Marathon.jpg"
+                alt="City Marathon Image"
+                data-tooltip="City Marathon: A full marathon through the heart of Algiers. Date: September 15, 2024. Location: Algiers."
+              />
+            </li>
+
+            <li class="event-details">
+              <h3>Algiers Marathon</h3>
+
+              <div class="date">
+                <i class="fa-solid fa-calendar-days"></i>September 15, 2024
+              </div>
+
+              <div class="type">
+                <i class="fa-solid fa-user"></i>General - 10K
+              </div>
+              <div class="time">
+                <i class="fa-regular fa-clock"></i>Start 08:00 AM, Untill Finish
+              </div>
+              <div class="location">
+                <i class="fa-solid fa-location-dot"></i>Bouchaoui, Algiers -
+                Algeria
+              </div>
+            </li>
+
+            <li class="event-price">
+              <div>
+                <p class="title">Ticket</p>
+                <div><span class="price">50$</span></div>
+              </div>
+
+              <a href="#" class="btn">View More</a>
+            </li>
+          </ul>
+
+          <ul class="run">
+            <li class="event-icon">
+              <img
+                src="media/image/Sahara-Marathon.webp"
+                alt="Sahara Marathon Image"
+              />
+            </li>
+
+            <li class="event-details">
+              <h3>Sahara Marathon</h3>
+
+              <div class="date">
+                <i class="fa-solid fa-calendar-days"></i>October 20, 2024
+              </div>
+
+              <div class="type">
+                <i class="fa-solid fa-user"></i>General - 15K
+              </div>
+              <div class="time">
+                <i class="fa-regular fa-clock"></i>Start 06:00 AM, Untill Finish
+              </div>
+              <div class="location">
+                <i class="fa-solid fa-location-dot"></i>Ghardaia, Algeria
+              </div>
+            </li>
+
+            <li class="event-price">
+              <div>
+                <p class="title">Ticket</p>
+                <div><span class="price">20$</span></div>
+              </div>
+
+              <a href="#" class="btn">View More</a>
+            </li>
+          </ul>
+
+          <ul class="run">
+            <li class="event-icon">
+              <img
+                src="media/image/Mountain-Trail.webp"
+                alt="City Marathon Image"
+              />
+            </li>
+
+            <li class="event-details">
+              <h3>Mountain Trail Run</h3>
+
+              <div class="date">
+                <i class="fa-solid fa-calendar-days"></i>June 10, 2025
+              </div>
+
+              <div class="type">
+                <i class="fa-solid fa-user"></i>General - 20K
+              </div>
+              <div class="time">
+                <i class="fa-regular fa-clock"></i>Start 07:00 AM, Untill Finish
+              </div>
+              <div class="location">
+                <i class="fa-solid fa-location-dot"></i>Tizi Ouzou, Algeria
+              </div>
+            </li>
+
+            <li class="event-price">
+              <div>
+                <p class="title">Ticket</p>
+                <div><span class="price">40$</span></div>
+              </div>
+
+              <a href="#" class="btn">View More</a>
+            </li>
+          </ul>
+        </div>
+      </section>
+      <!-- ------------------------------------------------------------------------- -->
+
+      <!-- Results Section -->
+      <section class="results" id="R">
+        <div class="container">
+          <div class="subtitle">results</div>
+          <h2 class="title">Running Results</h2>
+
+          <div class="table-wrapper">
+            <h3>Algiers Marathon 2023</h3>
+            <table class="content-table">
+              <thead>
+                <tr>
+                  <th>Rank</th>
+                  <th>Name</th>
+                  <th>Time</th>
+                  <th>Age</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td><span class="rank">1</span></td>
+                  <td>John Doe</td>
+                  <td>00:45:32</td>
+                  <td>30</td>
+                </tr>
+                <tr>
+                  <td><span class="rank">2</span></td>
+                  <td>Jane Smith</td>
+                  <td>00:47:21</td>
+                  <td>30</td>
+                </tr>
+                <tr>
+                  <td><span class="rank">3</span></td>
+                  <td>Jane Smith</td>
+                  <td>00:47:21</td>
+                  <td>30</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+          <div class="table-wrapper">
+            <h3>Algiers Marathon 2023</h3>
+            <table class="content-table">
+              <thead>
+                <tr>
+                  <th>Rank</th>
+                  <th>Name</th>
+                  <th>Time</th>
+                  <th>Age</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td><span class="rank">1</span></td>
+                  <td>John Doe</td>
+                  <td>00:45:32</td>
+                  <td>30</td>
+                </tr>
+                <tr>
+                  <td><span class="rank">2</span></td>
+                  <td>Jane Smith</td>
+                  <td>00:47:21</td>
+                  <td>30</td>
+                </tr>
+                <tr>
+                  <td><span class="rank">3</span></td>
+                  <td>Jane Smith</td>
+                  <td>00:47:21</td>
+                  <td>30</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+          <div class="table-wrapper">
+            <h3>Algiers Marathon 2023</h3>
+            <table class="content-table">
+              <thead>
+                <tr>
+                  <th>Rank</th>
+                  <th>Name</th>
+                  <th>Time</th>
+                  <th>Age</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td><span class="rank">1</span></td>
+                  <td>John Doe</td>
+                  <td>00:45:32</td>
+                  <td>30</td>
+                </tr>
+                <tr>
+                  <td><span class="rank">2</span></td>
+                  <td>Jane Smith</td>
+                  <td>00:47:21</td>
+                  <td>30</td>
+                </tr>
+                <tr>
+                  <td><span class="rank">3</span></td>
+                  <td>Jane Smith</td>
+                  <td>00:47:21</td>
+                  <td>30</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </section>
+
+      <!-- Partnering restaurants -->
+      <section class="partnering" id="P">
+        <div class="container">
+          <div class="subtitle">Our Social Live</div>
+          <h2 class="title">Partnering restaurants</h2>
+
+          <div class="partnering-wrapper">
+            <div class="card">
+              <div class="img">
+                <img src="media/image/hangouts.jpg" alt="Card image" />
+              </div>
+
+              <div class="card-content">
+                <h3>Hangouts</h3>
+                <p>
+                  A hangout group gathers friends for casual, relaxed moments.
+                  Whether chilling at a cafe, linking up in the park, or
+                  watching TV, it's all about camaraderie.
+                </p>
+                <div class="social-icons">
+                  <a href="#"><i class="fab fa-facebook-f"></i></a>
+                  <a href="#"><i class="fab fa-twitter"></i></a>
+                  <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                </div>
+              </div>
+            </div>
+
+            <div class="card">
+              <div class="img">
+                <img src="media/image/meetup-wine.webp" alt="Card image" />
+              </div>
+              <div class="card-content">
+                <h3>Meetup wine</h3>
+                <p>
+                  A Wine Meetup group brings together wine enthusiasts to taste
+                  new wines, discuss vintages, and learn about noses and legs.
+                  Fun fun fun!
+                </p>
+                <div class="social-icons">
+                  <a href="#"><i class="fab fa-facebook-f"></i></a>
+                  <a href="#"><i class="fab fa-twitter"></i></a>
+                  <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                </div>
+              </div>
+            </div>
+            <div class="card self">
+              <div class="img">
+                <img src="media/image/coffeshop.webp" alt="Card image" />
+              </div>
+              <div class="card-content">
+                <h3>Coffeshop</h3>
+                <p>
+                  A coffee shop group gathers coffee enthusiasts, sharing
+                  aromatic brews, cozy conversations, and the comforting hum of
+                  espresso machines.
+                </p>
+                <div class="social-icons">
+                  <a href="#"><i class="fab fa-facebook-f"></i></a>
+                  <a href="#"><i class="fab fa-twitter"></i></a>
+                  <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Gallery section-->
+
+      <section class="gallery" id="G">
+        <div class="container">
+          <div class="subtitle">See our latest photos</div>
+          <h2 class="title">Photo Gallery</h2>
+
+          <ul class="gallery-container">
+            <li class="tall">
+              <figure>
+                <a href="#">
+                  <img src="media/image/runners-church.webp" alt="Gallery item"
+                /></a>
+                <figcaption>
+                  <h4>Church runners</h4>
+                  <p>
+                    A church marathon combines faith and fitness, where runners
+                    participate in a race that winds through sacred spaces. It's
+                    a spiritual journey marked by endurance, prayer, and
+                    community.
+                  </p>
+                </figcaption>
+              </figure>
+            </li>
+
+            <li>
+              <figure>
+                <a href="#">
+                  <img
+                    src="media/image/marathon-runners.webp"
+                    alt="Gallery item"
+                /></a>
+                <figcaption>
+                  <h4>Marathon runners</h4>
+                  <p>
+                    A marathon runner embodies endurance, resilience, and
+                    determination. They navigate the long, winding course,
+                    fueled by passion, sweat, and the rhythmic beat of their
+                    pounding footsteps
+                  </p>
+                </figcaption>
+              </figure>
+            </li>
+
+            <li>
+              <figure>
+                <a href="#">
+                  <img
+                    src="media/image/runners-grayscale.jpg"
+                    alt="Gallery item"
+                /></a>
+                <figcaption>
+                  <h4>Professional runners</h4>
+                  <p>
+                    Professional marathon runners are elite athletes who have
+                    reached the highest level in their sport. They train
+                    rigorously, pushing their limits to achieve remarkable speed
+                    and endurance on long-distance courses.
+                  </p>
+                </figcaption>
+              </figure>
+            </li>
+
+            <li>
+              <figure>
+                <a href="#">
+                  <img src="media/image/tunnel-runners.webp" alt="Gallery item"
+                /></a>
+                <figcaption>
+                  <h4>Tunnel runners</h4>
+                  <p>
+                    adrenaline-fueled athletes who sprint through dimly lit
+                    tunnels, their breath echoing against cold walls. Each
+                    stride reverberates—a rhythmic dance in the heart of
+                    darkness.
+                  </p>
+                </figcaption>
+              </figure>
+            </li>
+
+            <li>
+              <figure>
+                <a href="#">
+                  <img src="media/image/hangouts.jpg" alt="Gallery item"
+                /></a>
+                <figcaption>
+                  <h4>Hangouts</h4>
+                  <p>
+                    A hangout group gathers friends for casual, relaxed moments.
+                    Whether chilling at a cafe, linking up in the park, or
+                    watching TV, it's about camaraderie and ease.
+                  </p>
+                </figcaption>
+              </figure>
+            </li>
+
+            <li>
+              <figure>
+                <a href="#">
+                  <img src="media/image/meetup-wine.webp" alt="Gallery item"
+                /></a>
+                <figcaption>
+                  <h4>Meetup wine</h4>
+                  <p>
+                    A Wine Meetup group brings together wine enthusiasts to
+                    taste new wines, discuss vintages, and learn about noses and
+                    legs.
+                  </p>
+                </figcaption>
+              </figure>
+            </li>
+
+            <li>
+              <figure>
+                <a href="#">
+                  <img src="media/image/coffeshop.webp" alt="Gallery item"
+                /></a>
+                <figcaption>
+                  <h4>Coffeshop</h4>
+                  <p>
+                    A coffee shop group gathers coffee enthusiasts, sharing
+                    aromatic brews, cozy conversations, and the comforting hum
+                    of espresso machines.
+                  </p>
+                </figcaption>
+              </figure>
+            </li>
+          </ul>
+        </div>
+      </section>
+
+      <!-- Membership Section -->
+      <section class="contact" id="C">
+        <div class="container">
+          <div class="subtitle">Join us for our next run</div>
+          <h2 class="title">Get Free Email Updates!</h2>
+          <form class="contact-form" action="#" method="post">
+            <div class="form-group">
+              <label for="name">Name <span class="required">*</span></label>
+              <input
+                type="text"
+                name="name"
+                id="name"
+                placeholder="Your name"
+                required
+              />
+            </div>
+
+            <div class="form-group">
+              <label for="email">Email <span class="required">*</span></label>
+              <input
+                type="text"
+                name="email"
+                id="email"
+                placeholder="Your email"
+                required
+              />
+            </div>
+
+            <div class="form-group">
+              <label for="message"
+                >Message <span class="required">*</span></label
+              >
+              <textarea
+                name="message"
+                id="message"
+                cols="50"
+                rows="6"
+                placeholder="How can we help you?"
+                required
+              >
+              </textarea>
+            </div>
+            <input class="subscribe" type="submit" value="Subscribe" />
+          </form>
+        </div>
+      </section>
+    </div>
+
+    <!-- Footer Section -->
+    <footer>
+      <div class="social-icons">
+        <!-- Replace the "#" with your actual social media URLs -->
+        <a href="#" class="icon"
+          ><i class="fa-brands fa-square-facebook"></i
+        ></a>
+        <a href="#" class="icon"
+          ><i class="fa-brands fa-square-x-twitter"></i
+        ></a>
+        <a href="#" class="icon"
+          ><i class="fa-brands fa-square-instagram"></i
+        ></a>
+        <!-- Add more icons as needed -->
+      </div>
+      <p>© 2024 Running Club. All rights reserved.</p>
+    </footer>
+  </body>
+</html>
