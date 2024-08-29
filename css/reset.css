@@ -1,5 +1,3 @@
-/* Reset */
-
 *,
 *::before,
 ::after {
@@ -17,9 +15,6 @@ body {
   text-rendering: optimizeSpeed;
   scroll-behavior: smooth;
   line-height: 1.5;
-  /* meant for "body" text, not headings. 
-     change the heading if u want 
-  */
 }
 
 /* 5. Avoid text overflows */
@@ -31,7 +26,6 @@ h4,
 h5,
 h6 {
   overflow-wrap: break-word;
-  /* font-size: 100%; */
   font-weight: normal;
 }
 
