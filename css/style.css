@@ -273,10 +273,6 @@ p {
   padding: 32px;
 }
 
-.about .subtitle {
-  color: #8c0a51;
-}
-
 .about .welcome {
   margin-bottom: 40px;
 }
@@ -336,7 +332,6 @@ p {
 .cards .card {
   text-align: center;
   padding: 1rem 1rem 2rem 1rem;
-  /* background-color: #fef0f3; */
   background-color: #ffecf0;
   border: 1px solid #eaeaea;
   border-radius: 5px;
@@ -537,18 +532,20 @@ p {
   padding: 32px;
 }
 
-.results .subtitle {
-  color: #8c0a51;
-}
-
 .results .table-wrapper {
   margin-bottom: 2rem;
 }
 
 .results h3 {
-  font-size: 20px;
-  font-weight: 700;
+  width: 200px;
+  margin: auto;
+  padding: 5px 0;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+  font-size: 14px;
   text-align: center;
+  background-color: #202020;
+  color: white;
 }
 
 .results .content-table {
@@ -793,19 +790,13 @@ p {
   ====================
 */
 .main-content .contact {
+  font-family: "Inter", sans-serif;
   background-color: #121212;
   padding: 32px;
 }
 
 .contact .title {
   color: #fff;
-}
-
-.contact p {
-  color: #8c0a51;
-  font-size: 16px;
-  text-align: center;
-  font-weight: 700;
 }
 
 .contact .contact-form {
@@ -829,22 +820,27 @@ p {
 }
 
 .contact .form-group .required {
-  color: #8c0a51;
+  color: #ff4960;
   vertical-align: middle;
 }
 
 .contact .form-group input,
 .contact .form-group textarea {
-  font-family: "Roboto", sans-serif;
-  padding: 15px;
-  border: 1px solid #ccc;
-  border-radius: 4px;
   font-size: 18px;
+  font-family: inherit;
+  padding: 0 1rem;
+  background-color: #dddfe3;
+  border: 2px solid;
+  border-color: #dddfe3;
+  border-radius: 4px;
+
+  transition: border-color 0.4s ease-in-out;
 }
 
 .contact .form-group input {
-  width: 25%;
-  min-width: 300px;
+  display: block;
+  height: 3rem;
+  min-width: 20rem;
 }
 
 .contact .form-group textarea {
@@ -853,10 +849,14 @@ p {
   min-width: 300px;
 }
 
+.contact .form-group input:focus,
+.contact .form-group textarea:focus {
+  border-color: #ff4960;
+}
+
 .contact .subscribe {
   align-self: flex-start;
 
-  font-family: "Roboto", sans-serif;
   font-size: 14px;
   font-weight: 600;
   text-transform: uppercase;
@@ -864,7 +864,7 @@ p {
   color: #ffffff;
   background-color: #ff4960;
   border: 2px solid #ff4960;
-  border-radius: 0.25rem;
+  border-radius: 4px;
   padding: 12px 24px;
 
   transition: background-color 0.3s ease-in-out;
