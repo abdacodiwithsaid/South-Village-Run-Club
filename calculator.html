@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>3D Calculator</title>
+    <link rel="stylesheet" href="calculator.css">
+</head>
+<body>
+    <div class="calculator">
+        <button class="button" id="darkModeToggle" style="grid-column: span 4; margin-bottom: 10px; padding: 10px; font-size: 0.8em;">Toggle Dark Mode</button>
+        <div class="display">
+            <input type="text" id="result" readonly>
+        </div>
+        <div class="buttons">
+            <button class="button operator clear" id="clear">C</button>
+            <button class="button operator" data-value="/">/</button>
+            <button class="button operator" data-value="*">*</button>
+            <button class="button operator" data-value="-">-</button>
+
+            <button class="button number" data-value="7">7</button>
+            <button class="button number" data-value="8">8</button>
+            <button class="button number" data-value="9">9</button>
+            <button class="button operator" data-value="+">+</button>
+
+            <button class="button number" data-value="4">4</button>
+            <button class="button number" data-value="5">5</button>
+            <button class="button number" data-value="6">6</button>
+            <button class="button operator equals" id="equals">=</button>
+
+            <button class="button number" data-value="1">1</button>
+            <button class="button number" data-value="2">2</button>
+            <button class="button number" data-value="3">3</button>
+
+            <button class="button number zero" data-value="0">0</button>
+            <button class="button number" data-value=".">.</button>
+        </div>
+    </div>
+    <script src="calculator.js"></script>
+</body>
+</html>

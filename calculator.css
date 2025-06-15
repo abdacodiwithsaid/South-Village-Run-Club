@@ -1,0 +1,278 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #f0f0f0; /* This will be the light mode default */
+    margin: 0;
+    font-family: 'Arial', sans-serif;
+    transition: background-color 0.3s ease; /* Added transition */
+}
+
+.calculator {
+    background-color: #d0d0d0; /* Light grey base */
+    border-radius: 20px;
+    padding: 25px;
+    box-shadow:
+        -8px -8px 15px rgba(255, 255, 255, 0.7), /* Top-left highlight */
+        8px 8px 15px rgba(0, 0, 0, 0.3),       /* Bottom-right shadow for depth */
+        inset -5px -5px 10px rgba(255, 255, 255, 0.7), /* Inner top-left highlight */
+        inset 5px 5px 10px rgba(0, 0, 0, 0.3);        /* Inner bottom-right shadow */
+    display: grid;
+    grid-template-rows: auto auto 1fr; /* Adjusted for toggle: toggle, display, buttons */
+    gap: 20px;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease; /* Added transition */
+}
+
+.display {
+    background-color: #e0e0e0; /* Slightly lighter than calculator base */
+    border-radius: 10px;
+    padding: 10px;
+    box-shadow:
+        inset 3px 3px 7px rgba(0, 0, 0, 0.2),  /* Inner shadow for sunken effect */
+        inset -3px -3px 7px rgba(255, 255, 255, 0.9); /* Inner highlight */
+}
+
+.display input {
+    width: 100%;
+    background-color: transparent;
+    border: none;
+    color: #333;
+    font-size: 2.5em;
+    text-align: right;
+    padding: 10px;
+    box-sizing: border-box;
+    outline: none;
+}
+
+.buttons {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 15px;
+}
+
+.button {
+    background-color: #e8e8e8; /* Default button color */
+    border: none;
+    border-radius: 15px; /* Rounded buttons */
+    padding: 20px;
+    font-size: 1.5em;
+    color: #333;
+    cursor: pointer;
+    box-shadow:
+        -5px -5px 10px rgba(255, 255, 255, 0.8), /* Highlight */
+        5px 5px 10px rgba(0, 0, 0, 0.2);       /* Shadow */
+    transition: all 0.1s ease-in-out;
+}
+
+.button:hover {
+    background-color: #f0f0f0; /* Lighter on hover */
+}
+
+.button:active {
+    background-color: #d8d8d8; /* Darker when pressed */
+    box-shadow:
+        inset -3px -3px 7px rgba(255, 255, 255, 0.8),
+        inset 3px 3px 7px rgba(0, 0, 0, 0.2);
+    transform: scale(0.98); /* Slight press down effect */
+}
+
+.button.operator {
+    background-color: #ff9f0a; /* Orange for operators */
+    color: white;
+}
+
+.button.operator:hover {
+    background-color: #ffb74e;
+}
+
+.button.operator:active {
+    background-color: #e08e09;
+     box-shadow:
+        inset -3px -3px 7px rgba(255, 255, 255, 0.7), /* Adjusted for colored button */
+        inset 3px 3px 7px rgba(0, 0, 0, 0.3);
+}
+
+
+.button.clear {
+    background-color: #ff6b6b; /* Reddish for clear */
+    color: white;
+}
+
+.button.clear:hover {
+    background-color: #ff8787;
+}
+
+.button.clear:active {
+    background-color: #e05252;
+    box-shadow:
+        inset -3px -3px 7px rgba(255, 255, 255, 0.7),
+        inset 3px 3px 7px rgba(0, 0, 0, 0.3);
+}
+
+.button.equals {
+    background-color: #4CAF50; /* Green for equals */
+    color: white;
+    grid-column: span 1; /* Default span */
+}
+/* Make equals button span 2 columns if it's the last element in its row
+   and the row has space. This specific layout might need HTML adjustment
+   if other buttons are meant to be beside it on the same row.
+   For the current HTML, it's on a row with 3 other buttons, so span 1 is fine.
+   If it were alone or with one other, span could be adjusted.
+*/
+
+
+.button.zero {
+    grid-column: span 2; /* Make the zero button wider */
+}
+
+/* Basic responsiveness */
+@media (max-width: 480px) {
+    .calculator {
+        width: 95%;
+        padding: 20px;
+    }
+    .button {
+        padding: 15px;
+        font-size: 1.2em;
+    }
+    .display input {
+        font-size: 2em;
+    }
+    .buttons {
+        gap: 10px;
+    }
+}
+
+#darkModeToggle {
+    grid-column: span 4; /* Make it span all columns */
+    margin-bottom: 10px;
+    padding: 10px;
+    font-size: 0.8em;
+    /* Default light mode appearance, consistent with other .button styles */
+    background-color: #e8e8e8;
+    border: none;
+    border-radius: 10px; /* Slightly less rounded than calculation buttons */
+    color: #333;
+    cursor: pointer;
+    box-shadow:
+        -4px -4px 8px rgba(255, 255, 255, 0.8),
+        4px 4px 8px rgba(0, 0, 0, 0.2);
+    transition: all 0.1s ease-in-out;
+}
+
+#darkModeToggle:hover {
+    background-color: #f0f0f0;
+}
+
+#darkModeToggle:active {
+    background-color: #d8d8d8;
+    box-shadow:
+        inset -2px -2px 5px rgba(255, 255, 255, 0.8),
+        inset 2px 2px 5px rgba(0, 0, 0, 0.2);
+    transform: scale(0.98);
+}
+
+/* Ensure body also changes background for dark mode */
+body.dark-mode-active {
+    background-color: #121212; /* Dark background for the page itself */
+}
+
+/* Dark Mode Styles */
+.calculator.dark-mode {
+    background-color: #3a3a3a; /* Dark grey base for dark mode */
+    box-shadow:
+        -8px -8px 15px rgba(55, 55, 55, 0.7),  /* Darker highlight */
+        8px 8px 15px rgba(0, 0, 0, 0.5),        /* Stronger bottom-right shadow */
+        inset -5px -5px 10px rgba(55, 55, 55, 0.7),  /* Inner darker highlight */
+        inset 5px 5px 10px rgba(0, 0, 0, 0.5);         /* Inner stronger shadow */
+}
+
+.calculator.dark-mode .display {
+    background-color: #2c2c2c; /* Very dark grey for display */
+    box-shadow:
+        inset 3px 3px 7px rgba(0, 0, 0, 0.4),
+        inset -3px -3px 7px rgba(70, 70, 70, 0.9);
+}
+
+.calculator.dark-mode .display input {
+    color: #e0e0e0; /* Light text for dark display */
+}
+
+.calculator.dark-mode .button {
+    background-color: #4a4a4a; /* Darker button color */
+    color: #e0e0e0; /* Light text for buttons */
+    box-shadow:
+        -5px -5px 10px rgba(65, 65, 65, 0.8), /* Darker highlight */
+        5px 5px 10px rgba(0, 0, 0, 0.3);       /* Adjusted shadow */
+}
+
+.calculator.dark-mode .button:hover {
+    background-color: #5a5a5a;
+}
+
+.calculator.dark-mode .button:active {
+    background-color: #383838;
+    box-shadow:
+        inset -3px -3px 7px rgba(65, 65, 65, 0.8),
+        inset 3px 3px 7px rgba(0, 0, 0, 0.3);
+}
+
+.calculator.dark-mode .button.operator {
+    background-color: #ff8c00; /* Darker orange for operators */
+    color: #ffffff;
+}
+
+.calculator.dark-mode .button.operator:hover {
+    background-color: #ff9f33;
+}
+
+.calculator.dark-mode .button.operator:active {
+    background-color: #cc7000;
+     box-shadow:
+        inset -3px -3px 7px rgba(255, 165, 40, 0.7),
+        inset 3px 3px 7px rgba(0, 0, 0, 0.4);
+}
+
+.calculator.dark-mode .button.clear {
+    background-color: #d32f2f; /* Darker red for clear */
+    color: #ffffff;
+}
+
+.calculator.dark-mode .button.clear:hover {
+    background-color: #e57373;
+}
+
+.calculator.dark-mode .button.clear:active {
+    background-color: #b71c1c;
+    box-shadow:
+        inset -3px -3px 7px rgba(255, 100, 100, 0.7),
+        inset 3px 3px 7px rgba(0, 0, 0, 0.4);
+}
+
+.calculator.dark-mode .button.equals {
+    background-color: #388e3c; /* Darker green for equals */
+    color: #ffffff;
+}
+
+.calculator.dark-mode .button.equals:hover {
+    background-color: #66bb6a;
+}
+
+.calculator.dark-mode .button.equals:active {
+    background-color: #2e7d32;
+    box-shadow:
+        inset -3px -3px 7px rgba(80, 150, 80, 0.7),
+        inset 3px 3px 7px rgba(0, 0, 0, 0.4);
+}
+
+/* Style for the toggle button itself in dark mode, if needed */
+.calculator.dark-mode #darkModeToggle {
+    background-color: #5a5a5a; /* Consistent with other buttons in dark mode */
+    color: #e0e0e0;
+}
+
+.calculator.dark-mode #darkModeToggle:hover {
+    background-color: #6a6a6a;
+}
