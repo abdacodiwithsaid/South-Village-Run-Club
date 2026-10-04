@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
@@ -14,17 +14,18 @@
     <script src="js/app.js" defer></script>
   </head>
   <body>
+    <a class="skip-link" href="#main-content">Skip to content</a>
     <!-- The Header -->
     <header class="fixed-header">
       <nav class="navbar">
-        <a class="logo" href="#"
+        <a class="logo" href="#top" aria-label="South Village Run Club home"
           ><i class="fa-solid fa-person-running"></i
           ><strong
             >South Village <span class="r">R</span><span class="c">C</span>
           </strong></a
         >
 
-        <ul class="navbar-links">
+        <ul class="navbar-links" id="primary-navigation">
           <li><a href="#A">About Us</a></li>
           <li><a href="#E">Events</a></li>
           <li><a href="#R">Results</a></li>
@@ -32,23 +33,38 @@
           <li><a href="#G">Gallery</a></li>
         </ul>
 
-        <div class="hamburger">
+        <a class="nav-join" href="#C">Join the club</a>
+
+        <button
+          class="hamburger"
+          type="button"
+          aria-label="Open navigation"
+          aria-controls="primary-navigation"
+          aria-expanded="false"
+        >
           <span class="bar"></span>
           <span class="bar"></span>
           <span class="bar"></span>
-        </div>
+        </button>
       </nav>
     </header>
 
     <!-- Hero Section -->
-    <section class="hero-section">
+    <section class="hero-section" id="top">
       <!-- The video -->
-      <video class="background-video" autoplay loop muted>
+      <video
+        class="background-video"
+        autoplay
+        loop
+        muted
+        playsinline
+        poster="media/image/Algiers-Marathon.jpg"
+      >
         <source src="media/video/runner.mp4" type="video/mp4" />
       </video>
 
       <div class="overlay-slogan">
-        <h1>Build your tomorrow</h1>
+        <h1>Build your <em>tomorrow.</em></h1>
         <p class="banner-description">
           At our village we do everything we can to help you become your best
           self, for the rest of your life.
@@ -58,7 +74,7 @@
     </section>
 
     <!-- Main Content -->
-    <div class="main-content">
+    <main class="main-content" id="main-content">
       <!-- Section About -->
       <section class="about" id="A">
         <div class="container">
@@ -107,7 +123,10 @@
           <!-- Cards -->
           <div class="cards">
             <div class="card">
-              <img src="media/image/about-image1.webp" alt="" />
+              <img
+                src="media/image/about-image1.webp"
+                alt="Runners training together"
+              />
               <h4>When do we train?</h4>
               <p>
                 We train every Monday and Wednesday evening from 6.30PM and meet
@@ -118,15 +137,18 @@
                 We have different pace and distances for different abilities.
               </p>
               <p>
-                Ther's a good mix from experienced and fast runners to beginners
-                and people just wanting to get fit.
+                There's a good mix, from experienced and fast runners to
+                beginners and people just wanting to get fit.
               </p>
 
-              <a href="#" class="btn-link">full agenda</a>
+              <a href="#E" class="btn-link">View race highlights</a>
             </div>
 
             <div class="card">
-              <img src="media/image/about-image2.webp" alt="" />
+              <img
+                src="media/image/about-image2.webp"
+                alt="Mossley Hill Athletics Club"
+              />
 
               <h4>Where are we?</h4>
               <p>
@@ -143,11 +165,20 @@
                 coffee!
               </p>
 
-              <a href="#" class="btn-link">Google maps</a>
+              <a
+                href="https://maps.google.com/?q=Mossley+Hill+Athletics+Club,+9+Mossley+Hill+Road,+Liverpool+L18+4PT"
+                class="btn-link"
+                target="_blank"
+                rel="noreferrer"
+                >Get directions</a
+              >
             </div>
 
             <div class="card">
-              <img src="media/image/about-image3.webp" alt="" />
+              <img
+                src="media/image/about-image3.webp"
+                alt="Road runners taking part in a race"
+              />
 
               <h4>What do we do?</h4>
               <p>
@@ -163,7 +194,7 @@
                 pressure if you just want to train with us.
               </p>
 
-              <a href="#" class="btn-link">Learn more</a>
+              <a href="#P" class="btn-link">Meet the community</a>
             </div>
           </div>
         </div>
@@ -172,21 +203,20 @@
       <!-- Events Section -->
       <section class="events-section" id="E">
         <div class="container">
-          <div class="subtitle">Events</div>
-          <h2 class="title">Upcoming Events</h2>
+          <div class="subtitle">Race archive</div>
+          <h2 class="title">Past race highlights</h2>
 
           <p class="intro-content">
-            Whether you plan on running your first 5km race, or have your sights
-            set on a Comrades gold medal,
-            <span class="club-name">South Village Run Club</span> offers you the
-            ultimate experience, with a fresh and energised approach.
+            From a first 5K to a big-distance goal, running is better together.
+            Explore a few past race highlights from the
+            <span class="club-name">South Village Run Club</span> community.
           </p>
 
           <ul class="run">
             <li class="event-icon">
               <img
                 src="media/image/Algiers-Marathon.jpg"
-                alt="City Marathon Image"
+                alt="Runners at the Algiers Marathon"
                 data-tooltip="City Marathon: A full marathon through the heart of Algiers. Date: September 15, 2024. Location: Algiers."
               />
             </li>
@@ -202,7 +232,7 @@
                 <i class="fa-solid fa-user"></i>General - 10K
               </div>
               <div class="time">
-                <i class="fa-regular fa-clock"></i>Start 08:00 AM, Untill Finish
+                <i class="fa-regular fa-clock"></i>Start 08:00 AM, Until finish
               </div>
               <div class="location">
                 <i class="fa-solid fa-location-dot"></i>Bouchaoui, Algiers -
@@ -216,7 +246,7 @@
                 <div><span class="price">50$</span></div>
               </div>
 
-              <a href="#" class="btn">View More</a>
+              <a href="#C" class="btn">Get involved</a>
             </li>
           </ul>
 
@@ -224,7 +254,7 @@
             <li class="event-icon">
               <img
                 src="media/image/Sahara-Marathon.webp"
-                alt="Sahara Marathon Image"
+                alt="Runners taking part in the Sahara Marathon"
               />
             </li>
 
@@ -239,7 +269,7 @@
                 <i class="fa-solid fa-user"></i>General - 15K
               </div>
               <div class="time">
-                <i class="fa-regular fa-clock"></i>Start 06:00 AM, Untill Finish
+                <i class="fa-regular fa-clock"></i>Start 06:00 AM, Until finish
               </div>
               <div class="location">
                 <i class="fa-solid fa-location-dot"></i>Ghardaia, Algeria
@@ -252,7 +282,7 @@
                 <div><span class="price">20$</span></div>
               </div>
 
-              <a href="#" class="btn">View More</a>
+              <a href="#C" class="btn">Get involved</a>
             </li>
           </ul>
 
@@ -260,7 +290,7 @@
             <li class="event-icon">
               <img
                 src="media/image/Mountain-Trail.webp"
-                alt="City Marathon Image"
+                alt="Runners on a mountain trail"
               />
             </li>
 
@@ -275,7 +305,7 @@
                 <i class="fa-solid fa-user"></i>General - 20K
               </div>
               <div class="time">
-                <i class="fa-regular fa-clock"></i>Start 07:00 AM, Untill Finish
+                <i class="fa-regular fa-clock"></i>Start 07:00 AM, Until finish
               </div>
               <div class="location">
                 <i class="fa-solid fa-location-dot"></i>Tizi Ouzou, Algeria
@@ -288,7 +318,7 @@
                 <div><span class="price">40$</span></div>
               </div>
 
-              <a href="#" class="btn">View More</a>
+              <a href="#C" class="btn">Get involved</a>
             </li>
           </ul>
         </div>
@@ -408,8 +438,8 @@
       <!-- Partnering restaurants -->
       <section class="partnering" id="P">
         <div class="container">
-          <div class="subtitle">Our Social Live</div>
-          <h2 class="title">Partnering restaurants</h2>
+          <div class="subtitle">Run, meet, repeat</div>
+          <h2 class="title">Our community partners</h2>
 
           <div class="partnering-wrapper">
             <div class="card">
@@ -424,11 +454,7 @@
                   Whether chilling at a cafe, linking up in the park, or
                   watching TV, it's all about camaraderie.
                 </p>
-                <div class="social-icons">
-                  <a href="#"><i class="fab fa-facebook-f"></i></a>
-                  <a href="#"><i class="fab fa-twitter"></i></a>
-                  <a href="#"><i class="fab fa-linkedin-in"></i></a>
-                </div>
+                <a href="#C" class="btn-link">Ask us about Hangouts</a>
               </div>
             </div>
 
@@ -443,11 +469,7 @@
                   new wines, discuss vintages, and learn about noses and legs.
                   Fun fun fun!
                 </p>
-                <div class="social-icons">
-                  <a href="#"><i class="fab fa-facebook-f"></i></a>
-                  <a href="#"><i class="fab fa-twitter"></i></a>
-                  <a href="#"><i class="fab fa-linkedin-in"></i></a>
-                </div>
+                <a href="#C" class="btn-link">Ask us about Meetup wine</a>
               </div>
             </div>
             <div class="card self">
@@ -461,11 +483,7 @@
                   aromatic brews, cozy conversations, and the comforting hum of
                   espresso machines.
                 </p>
-                <div class="social-icons">
-                  <a href="#"><i class="fab fa-facebook-f"></i></a>
-                  <a href="#"><i class="fab fa-twitter"></i></a>
-                  <a href="#"><i class="fab fa-linkedin-in"></i></a>
-                </div>
+                <a href="#C" class="btn-link">Ask us about the coffee group</a>
               </div>
             </div>
           </div>
@@ -475,14 +493,16 @@
       <!-- Gallery section-->
       <section class="gallery" id="G">
         <div class="container">
-          <div class="subtitle">See our latest photos</div>
+          <div class="subtitle">The club, in motion</div>
           <h2 class="title">Photo Gallery</h2>
 
           <ul class="gallery-container">
             <li class="tall">
               <figure>
-                <a href="#">
-                  <img src="media/image/runners-church.webp" alt="Gallery item"
+                <a href="media/image/runners-church.webp">
+                  <img
+                    src="media/image/runners-church.webp"
+                    alt="Runners taking part in a community race"
                 /></a>
                 <figcaption>
                   <h4>Church runners</h4>
@@ -498,10 +518,10 @@
 
             <li>
               <figure>
-                <a href="#">
+                <a href="media/image/marathon-runners.webp">
                   <img
                     src="media/image/marathon-runners.webp"
-                    alt="Gallery item"
+                    alt="Runners moving together during a marathon"
                 /></a>
                 <figcaption>
                   <h4>Marathon runners</h4>
@@ -517,10 +537,10 @@
 
             <li>
               <figure>
-                <a href="#">
+                <a href="media/image/runners-grayscale.jpg">
                   <img
                     src="media/image/runners-grayscale.jpg"
-                    alt="Gallery item"
+                    alt="Athletes running on a race course"
                 /></a>
                 <figcaption>
                   <h4>Professional runners</h4>
@@ -536,8 +556,10 @@
 
             <li>
               <figure>
-                <a href="#">
-                  <img src="media/image/tunnel-runners.webp" alt="Gallery item"
+                <a href="media/image/tunnel-runners.webp">
+                  <img
+                    src="media/image/tunnel-runners.webp"
+                    alt="Runners training through a tunnel"
                 /></a>
                 <figcaption>
                   <h4>Tunnel runners</h4>
@@ -553,8 +575,10 @@
 
             <li>
               <figure>
-                <a href="#">
-                  <img src="media/image/hangouts.jpg" alt="Gallery item"
+                <a href="media/image/hangouts.jpg">
+                  <img
+                    src="media/image/hangouts.jpg"
+                    alt="Club members spending time together"
                 /></a>
                 <figcaption>
                   <h4>Hangouts</h4>
@@ -569,8 +593,10 @@
 
             <li>
               <figure>
-                <a href="#">
-                  <img src="media/image/meetup-wine.webp" alt="Gallery item"
+                <a href="media/image/meetup-wine.webp">
+                  <img
+                    src="media/image/meetup-wine.webp"
+                    alt="Club members meeting over refreshments"
                 /></a>
                 <figcaption>
                   <h4>Meetup wine</h4>
@@ -585,8 +611,10 @@
 
             <li>
               <figure>
-                <a href="#">
-                  <img src="media/image/coffeshop.webp" alt="Gallery item"
+                <a href="media/image/coffeshop.webp">
+                  <img
+                    src="media/image/coffeshop.webp"
+                    alt="Coffee and conversation after a run"
                 /></a>
                 <figcaption>
                   <h4>Coffeshop</h4>
@@ -605,8 +633,8 @@
       <!-- Membership Section -->
       <section class="contact" id="C">
         <div class="container">
-          <div class="subtitle">Join us for our next run</div>
-          <h2 class="title">Get Free Email Updates!</h2>
+          <div class="subtitle">Join us for a run</div>
+          <h2 class="title">Let's get you running</h2>
           <form class="contact-form">
             <div class="form-group">
               <label for="name">Name <span class="required">*</span></label>
@@ -622,10 +650,11 @@
             <div class="form-group">
               <label for="email">Email <span class="required">*</span></label>
               <input
-                type="text"
+                type="email"
                 name="email"
                 id="email"
                 placeholder="Your email"
+                autocomplete="email"
                 required
               />
             </div>
@@ -635,29 +664,23 @@
                 >Message (How can we help you?)
                 <span class="required">*</span></label
               >
-              <textarea name="message" id="message" cols="50" rows="6" required>
-              </textarea>
+              <textarea
+                name="message"
+                id="message"
+                cols="50"
+                rows="6"
+                required
+              ></textarea>
             </div>
-            <input class="subscribe" type="submit" value="Subscribe" />
+            <input class="subscribe" type="submit" value="Send message" />
           </form>
         </div>
       </section>
-    </div>
+    </main>
 
     <!-- Footer Section -->
     <footer>
-      <div class="social-icons">
-        <a href="#" class="icon"
-          ><i class="fa-brands fa-square-facebook"></i
-        ></a>
-        <a href="#" class="icon"
-          ><i class="fa-brands fa-square-x-twitter"></i
-        ></a>
-        <a href="#" class="icon"
-          ><i class="fa-brands fa-square-instagram"></i
-        ></a>
-      </div>
-      <p>© 2024 Running Club. All rights reserved.</p>
+      <p>© <span id="current-year"></span> South Village Run Club.</p>
     </footer>
   </body>
 </html>
